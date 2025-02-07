@@ -1,0 +1,53 @@
+/* CSS modules in React need to have the same naming convention on files - ComponentName.module.css */
+
+/* With CSS modules need to target only by classes or id's (targeting via only element is considered bad practice) */
+/* .nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+} */
+
+/* Can make a CSS module declaration global using :global function and adding class name inside - can then just add class as a string value in JSX and will apply style rules - className="test" */
+/* :global(.test) {
+  background-color: red;
+} */
+
+/* Can use global function with React Router NavLinks to style active classes to show which links are currently active */
+/* .nav :global(.active) {
+  background-color: green;
+} */
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.nav a:link,
+.nav a:visited {
+  text-decoration: none;
+  color: var(--color-light--2);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* CSS Modules feature */
+.nav a:global(.active) {
+  color: var(--color-brand--2);
+}
+
+a.ctaLink:link,
+a.ctaLink:visited {
+  background-color: var(--color-brand--2);
+  color: var(--color-dark--0);
+  padding: 0.8rem 2rem;
+  border-radius: 7px;
+}
