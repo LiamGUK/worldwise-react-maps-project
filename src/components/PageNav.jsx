@@ -1,6 +1,6 @@
 import { useState } from "react";
 // NavLink = alternative option to Link except it adds an active class to links that are currently being used. Can then use CSS to style links to show they are active
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import Logo from "./Logo";
 // Use CSS modules by importing to required component and giving the name 'styles' - becomes usable object to apply to JSX elements
@@ -9,9 +9,7 @@ import User from "./User";
 
 function PageNav() {
   const [menuActive, setMenuActive] = useState(false);
-  const location = useLocation();
   const { isAuthenticated } = useAuth();
-  console.log(location);
 
   const menuState = menuActive ? "nav-mobile__a" : "nav-mobile__na";
 
