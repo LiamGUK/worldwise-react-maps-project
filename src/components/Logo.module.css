@@ -1,3 +1,19 @@
+.logo-link {
+  margin-inline: auto;
+}
+
 .logo {
-  height: 5.2rem;
+  height: 3.4rem;
+}
+
+@media only screen and (min-width: 690px){
+  .logo-link {
+    margin: 0 auto 0 0;
+  }
+}
+
+@media only screen and (min-width: 530px){
+  .logo {
+    height: 4.2rem;
+  }
 }

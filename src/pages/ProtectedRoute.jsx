@@ -10,7 +10,7 @@ function ProtectedRoute({ children }) {
   useEffect(
     function () {
       // Will check if the user is authenticated from reducer hook, if not will always redirect to homepage
-      if (!isAuthenticated) navigate("/");
+      if (!isAuthenticated) navigate("/login");
     },
     [isAuthenticated, navigate]
   );
