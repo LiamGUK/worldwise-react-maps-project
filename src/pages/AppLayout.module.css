@@ -1,7 +1,18 @@
+.nav-bar nav {
+  background-color: var(--color-dark--2);
+  padding: 1rem 2rem;
+}
+
 .app {
   height: 100vh;
-  padding: 2.4rem;
   overscroll-behavior-y: none;
   display: flex;
+  flex-direction: column;
   position: relative;
+}
+
+@media only screen and (min-width: 690px){
+  .app {
+    flex-direction: row;
+  }
 }
